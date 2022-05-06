@@ -61,7 +61,7 @@ class ExplicitWaitTest {
 		WebElement error = driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#error_box > div.fsl.fwb.fcb")));
 		assertEquals("Wrong Credentials", error.getText());
 		
-		WebElement error2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#error_box > div:nth-child(2)")));
+		WebElement error2 = driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#error_box > div:nth-child(2)")));
 		assertEquals("Invalid username or password", error2.getText());
 	}
 
